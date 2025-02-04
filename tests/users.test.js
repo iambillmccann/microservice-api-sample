@@ -78,7 +78,7 @@ describe("User Management API (Grading)", () => {
         await request(server).get(`/users/${userId}`).expect(404);
     });
 
-    // 🆕 ✅ Test: DELETE /users/:id (Non-existent user)
+    // 🆕 ✅ Test: DELETE /users/:id (Non-existent user).
     it("DELETE /users/:id should return 404 if user does not exist", async () => {
         await request(server).delete("/users/nonexistent").expect(404);
     });
